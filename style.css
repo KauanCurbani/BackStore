@@ -87,7 +87,6 @@ header.sticky ul li a{
     text-transform: uppercase;
     text-align: center;
     line-height: 1em;
-    margin-left: 100px;
 }
 .banner h2 span{
     color: var(--cor1);
