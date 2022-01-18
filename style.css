@@ -16,6 +16,7 @@ html{
 body{
     min-height: 1000px;
     overflow-x: hidden;
+    width: 100vw;
 }
 header{
     position: fixed;
@@ -75,7 +76,7 @@ header.sticky ul li a{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#000000ce 40%, transparent), url(/img/bg.png) ;
+    background: linear-gradient(#000000ce 40%, transparent), url(../img/bg.png) ;
     background-size: cover;
     display: flex;
     justify-content: center;
