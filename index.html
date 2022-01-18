@@ -205,18 +205,22 @@
                     in dolor est temporibus dolorum.</p>
             </div>
             <div class="contactForm">
-                <form>
+                <form action="https://api.staticforms.xyz/submit" method="POST">
+                    <input type="hidden" name="accessKey" value="b20708bd-4dfd-4802-b021-4a8b6753e52a">
+                    <input type="hidden" name="redirectTo" value="https://kauancurbani.github.io/BackStore/">
+
+
                     <div class="row100">
                         <div class="inputBx50">
-                            <input type="text" placeholder="Nome Completo">
+                            <input type="text" placeholder="Nome Completo" name="name">
                         </div>
                         <div class="inputBx50">
-                            <input type="text" placeholder="E-mail">
+                            <input type="text" placeholder="E-mail" name="email">
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBx100">
-                            <textarea placeholder="Mensagem"></textarea>
+                            <textarea placeholder="Mensagem" name="message"></textarea>
                         </div>
                     </div>
                     <div class="row100">
@@ -230,7 +234,7 @@
                 <ul>
                     <li><a href="#"><ion-icon name="logo-discord"></ion-icon></a></li>
                     <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    <li><a href="" id="alerta"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon onclick="alerta()" name="logo-whatsapp"></ion-icon></a></li>
                 </ul>
             </div>
             <p class="copyright">Todos os direitos reservados. Back Store &#169</p>
@@ -246,11 +250,9 @@
             var header = document.querySelector("header")
             header.classList.toggle("active")
         }
-        function alert(){
+        function alerta(){
             alert("Indisponivel no momento")
         }
-        var alerta = document.querySelector("alerta")
-        alerta.onclick = alert()
     </script>
 <!-- Scrpt ION ICONS -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
