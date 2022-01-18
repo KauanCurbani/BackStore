@@ -81,12 +81,10 @@ header.sticky ul li a{
     align-items: center;
 }
 .banner h2{
-    
     color: #fff;
     font-size: 90px;
     text-transform: uppercase;
     text-align: center;
-    line-height: 1em;
 }
 .banner h2 span{
     color: var(--cor1);
@@ -450,5 +448,8 @@ p{
     .contactForm .row100 .inputBx100{
         width: 100%;
         margin: 0;
+    }
+    h2{
+        font-size: 36px;
     }
 }
