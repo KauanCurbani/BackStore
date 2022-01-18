@@ -153,6 +153,10 @@ p{
 .services .box .iconBx img{
     max-width: 70px;
     margin-bottom: 15px;
+    transition: .5s;
+}
+.services .box:hover .iconBx img{
+    transform: translateY(-10px) scale(1.1);
 }
 .services .box h2{
     font-size: 18px;
