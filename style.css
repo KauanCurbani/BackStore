@@ -251,6 +251,9 @@ p{
     justify-content: center;
     align-items: center;
 }
+.teamBx .member:hover{
+    transform: scale(1.03)   
+}
 .teamBx .member .imgBx{
     position: absolute;
     top: 0;
