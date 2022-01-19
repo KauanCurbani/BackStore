@@ -7,6 +7,7 @@
     <title>Back Store - Desenvolvimentos</title>
     <!-- Link Css -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="odometer.css">
 </head>
 <body>
     <!-- header -->
@@ -30,7 +31,7 @@
 
     <!-- About -->
     <section class="sec" id="about">
-        <div class="content">
+        <div class="content reveal">
             <div class="mxw800p">
                 <h3>Quem nós somos?</h3>
                 <p>A ideia da <b>Back Store</b> veio se concretizando de acordo com o tempo, tentamos abrir algumas 
@@ -51,7 +52,7 @@
     
     <!-- Services -->
     <section class="sec" id="services">
-        <div class="content">
+        <div class="content reveal">
             <div class="mxw800p">
                 <h3>O que fazemos?</h3>
                 <p>Conheça um pouco do nossos serviços, todos nossos profissionais são excelentes e detalistas, não dando espaço para trabalhos mal feitos
@@ -59,7 +60,7 @@
                 </p>
             </div>
             <div class="services">
-                <div class="box">
+                <div class="box reveal">
                     <div class="iconBx"><img src="img/design-ico.png" alt=""></div>
                 
                 <div class="content">
@@ -75,7 +76,7 @@
                 </div>
             </div>
 
-                <div class="box">
+                <div class="box reveal">
                     <div class="iconBx"><img src="img/dev-ico.png" alt=""></div>
                 
                 <div class="content">
@@ -86,7 +87,7 @@
                     </p>
                 </div>
             </div>
-                <div class="box">
+                <div class="box reveal">
                     <div class="iconBx"><img src="img/lua-ico.png" alt=""></div>
                 
                 <div class="content">
@@ -102,7 +103,7 @@
 
     <!-- Stats -->
     <section class="sec stats">
-        <div class="content">
+        <div class="content reveal">
             <div class="mxw800p">
                 <h3>Nossas Conquistas</h3>
                 <p>Temos orgulho de mostrar nossas estatísticas, apesar de não serem números alarmantes ainda estamos no começo de uma grande caminhada.
@@ -111,19 +112,19 @@
                     
                 <div class="statsBox">
                     <div class="box">
-                        <h2>250+</h2>
+                        <h2 class="statsNum">250+</h2>
                         <h4>Projetos</h4>
                     </div>
                     <div class="box">
-                        <h2>105+</h2>
+                        <h2 class="statsNum">105+</h2>
                         <h4>Clientes Felizes</h4>
                     </div>
                     <div class="box">
-                        <h2>10+</h2>
+                        <h2 class="statsNum">10+</h2>
                         <h4>Servidores</h4>
                     </div>
                     <div class="box">
-                        <h2>150+</h2>
+                        <h2 class="statsNum">150+</h2>
                         <h4>Países</h4>
                     </div>
                 </div>
@@ -133,7 +134,7 @@
 
     <!-- Portfolio -->
     <section class="sec work" id="portfolio">
-        <div class="content">
+        <div class="content reveal">
             <div class="mxw800p">
                 <h3>Projetos Recentes</h3>
                 <p>Deixamos aqui uma amostra de nossos serviços</p>
@@ -169,7 +170,7 @@
     </section>
     <!-- Team -->
     <section class="sec team" id="team">
-        <div class="content">
+        <div class="content reveal">
             <div class="mxw800p">
                 <h3>Nossa Equipe</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora 
@@ -204,12 +205,10 @@
     <!-- Contact -->
 
     <section class="sec contact" id="contact">
-        <div class="content">
+        <div class="content reveal">
             <div class="mxw800p">
                 <h3>Entre em contato</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora 
-                    repellendus iure facilis quasi ut, cumque molestiae accusamus quo 
-                    in dolor est temporibus dolorum.</p>
+                <p>Mande uma mensagem para nós! quem sabe podemos mudar a identidade visual da sue empresa!<br>Estamos a disposição para orçamentos, consultas e dúvidas.</p>
             </div>
             <div class="contactForm">
                 <form action="https://api.staticforms.xyz/submit" method="POST">
@@ -247,6 +246,28 @@
             <p class="copyright">Todos os direitos reservados. Back Store &#169</p>
         </div>
     </section>
+
+    <script>
+        window.addEventListener('scroll', reveal);
+
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal')
+
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowHeight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowHeight - revealpoint){
+                    reveals[i].classList.add('active')
+                }
+                else{
+                    reveals[i].classList.remove('active')
+                }
+            }
+        }
+    </script>
 
     <script type="text/javascript">
         window.addEventListener("scroll", function(){

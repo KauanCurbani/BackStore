@@ -18,6 +18,18 @@ body{
     overflow-x: hidden;
     width: 100vw;
 }
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all .8s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
 header{
     position: fixed;
     top: 0;
@@ -43,7 +55,10 @@ header .logo{
     font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: .6s;
+    transition: .2s;
+}
+header .logo:hover{
+    color: var(--cor1);
 }
 header .logo .ck{
     color:var(--cor1) ;
@@ -65,7 +80,10 @@ header ul li a{
     color: #fff;
     letter-spacing: 2px;
     font-weight: 300;
-    transition: .6s;
+    transition: .2s;
+}
+header ul li a:hover{
+    color: var(--cor1);
 }
 header.sticky .logo,
 header.sticky ul li a{
@@ -73,7 +91,7 @@ header.sticky ul li a{
 }
 
 .banner{
-    position: relative;
+    position:sticky;
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(#000000ce 40%, transparent), url(./img/bg.png) ;
