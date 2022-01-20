@@ -12,12 +12,46 @@
 }
 html{
     scroll-behavior: smooth;
+    
 }
 body{
     min-height: 1000px;
     overflow-x: hidden;
     width: 100vw;
 }
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--cor1);
+    border: 0px none #ffffff;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2f52b1;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: #1b306b;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff;
+    border: 0px none #ffffff;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: #fff;
+  }
+  ::-webkit-scrollbar-track:active {
+    background: #cfcfcf;
+  }
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
 .reveal{
     position: relative;
     transform: translateY(150px);
@@ -89,6 +123,9 @@ header.sticky .logo,
 header.sticky ul li a{
     color: #000;
 }
+header.sticky ul li a:hover{
+    color: var(--cor1);
+}
 
 .banner{
     position:sticky;
@@ -129,7 +166,8 @@ header.sticky ul li a{
 h3{
     font-size: 40px;
     font-weight: 200;
-    margin-bottom: 10px;
+
+    
 }
 p{
     position: relative;
@@ -146,6 +184,11 @@ p{
     text-decoration: none;
     color: #fff;
 }
+.serv{
+    background: linear-gradient(to top, #4979ff9a, #fff), url('https://c.pxhere.com/photos/5a/b4/Android_Cc0_computer_Desk_Device_High_Resolution_iphone_keyboard-1622138.jpg!d');
+    background-size: cover;
+    background-position: center;
+}
 .services{
     position: relative;
     display: grid;
@@ -153,6 +196,7 @@ p{
     grid-gap: 30px;
     max-width: 100%;
     margin-top: 40px;
+
 }
 .services .box{
     width: 300px;
